@@ -1,0 +1,289 @@
+@font-face {
+	font-family: "BlipWindows-Title";
+	src: url("Fonts/PixelOperatorHB8.ttf");
+}
+
+@font-face {
+	font-family: "BlipWindows-Content";
+	src: url("Fonts/PixelOperator.ttf");
+}
+
+@font-face {
+	font-family: "BlipWindows-Header";
+	src: url("Fonts/KarenFat.ttf");
+}
+
+@font-face {
+	font-family: "BlipSpeak";
+	src: url("Fonts/MyHandwriting.ttf");
+}
+
+@font-face {
+	font-family: "Stats";
+	src: url("Fonts/AKDPixel.ttf");
+}
+
+:root {
+	--window-background-color: #ee4488;
+
+	--window-title-size: 16px;
+	--window-title-shadow-color: #00000088;
+	--window-title-shadow-colorA: #FF000044;
+	--window-title-shadow-colorB: #0000FF44;
+
+	--window-size: 32px;
+	--window-shadow-color: #00000088;
+
+	--color-font-yellow: linear-gradient(white, #C0A000);
+}
+
+* {
+	image-rendering: pixelated;
+}
+
+.blipwindow {
+	position: absolute;
+
+	min-width: 320px;
+	min-height: 240px;
+	z-index: 1000;
+	resize: both;
+	overflow: hidden;
+
+	border-image-source: url("Graphics/Windows/Bottom.png");
+	border-image-slice: 16;
+	border-image-width: 32px;
+	border-image-repeat: repeat;
+	border-image-outset: 0px 8px 8px 8px;
+
+	background-color: var(--window-background-color);
+	background-clip: padding-box;
+
+	display: none;
+}
+
+.blipwindow.inactive {
+	border-image-source: url("Graphics/Windows/BottomInactive.png");
+}
+
+.blipwindow.active {
+	z-index: 1001;
+}
+
+.blipwindow.fixedsize {
+	resize: none;
+}
+
+.blipwindow.immobile.active {
+	z-index: 0;
+}
+
+.blipwindow.visible {
+	display: block;
+}
+
+.blipwindow-header {
+	cursor: move;
+	display: flex;
+	overflow: show;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 32px;
+
+	border-image-source: url("Graphics/Windows/Top.png");
+	border-image-slice: 8 fill;
+	border-image-width: 16px;
+	border-image-repeat: repeat;
+	border-image-outset: 0px 8px 0px 8px;
+}
+
+
+.blipwindow.immobile .blipwindow-header {
+	cursor: pointer;
+}
+
+.blipwindow.inactive .blipwindow-header {
+	border-image-source: url("Graphics/Windows/TopInactive.png");
+}
+
+.blipwindow-title {
+	padding-left: 8px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	font-family: "BlipWindows-Title";
+	font-size: var(--window-title-size);
+
+	color: white;
+	text-shadow:
+		2px 2px var(--window-title-shadow-color),
+		-1px 0px var(--window-title-shadow-colorA),
+		1px 0px var(--window-title-shadow-colorB);
+}
+
+.blipwindow-content {
+	padding-left: 12px;
+	padding-right: 12px;
+
+	height: calc(100% - 32px);
+
+	scroll-behavior: smooth;
+	overflow: scroll;
+
+	font-family: "BlipWindows-Content";
+	font-size: var(--window-size);
+
+	color: white;
+	text-shadow:
+		2px 2px var(--window-shadow-color);
+}
+
+.blipwindow-content p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.blipwindow-content h1 {
+	font-family: "BlipWindows-Header";
+	font-size: var(--window-size);
+
+	text-decoration: none;
+}
+
+.blipwindow-controls {
+	display: flex;
+	gap: 0;
+	padding-right: 8px;
+}
+
+/* Header Buttons */
+
+.blipwindow-header-button {
+	width: 32px;
+	height: 16px;
+	cursor: pointer;
+	text-decoration: none;
+	background-size: 100%;
+}
+
+.close-button {
+	background-image: url("Graphics/Windows/Close/Normal.png");
+}
+
+.close-button:hover {
+	background-image: url("Graphics/Windows/Close/Hover.png");
+}
+
+.close-button.disabled {
+	cursor: not-allowed;
+	background-image: url("Graphics/Windows/Close/Disabled.png");
+}
+
+.max-button {
+	background-image: url("Graphics/Windows/Maximize/Normal.png");
+}
+
+.max-button:hover {
+	background-image: url("Graphics/Windows/Maximize/Hover.png");
+}
+
+/* Buttons */
+
+.blipwindow-content button {
+	border-image-source: url("Graphics/Windows/Normal.png");
+	border-image-slice: 8 fill;
+	border-image-width: 16px;
+	border-image-repeat: repeat;
+
+	margin-bottom: 4px;
+
+	background-color: #00000000;
+
+	font-family: "BlipWindows-Content";
+	font-size: var(--window-size);
+
+	color: white;
+	text-shadow:
+	2px 2px var(--window-shadow-color);
+}
+
+.blipwindow-content button:hover {
+	border-image-source: url("Graphics/Windows/Hover.png");
+}
+
+.blipwindow-content button:active {
+	border-image-source: url("Graphics/Windows/Pressed.png");
+}
+
+.blipwindow-content button.disabled {
+	cursor: not-allowed;
+	border-image-source: url("Graphics/Windows/Disabled.png");
+}
+
+/* TEXT FLAVORS */
+
+.text-yellow
+{
+	background:var(--color-font-yellow);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+.text-gay {
+	animation: ani_rainbow 2s infinite linear;
+}
+.text-pansexual {
+	background:linear-gradient(#ff228c,#ff228c,#ffd800,#22b1ff,#22b1ff);
+
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+.text-nonbinary {
+	background:linear-gradient(#fdf435,#fdf435,#fdf435,#ffffff,#9d59d2,#2c2c2c,#2c2c2c);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+
+.text-chaotix {
+	background:linear-gradient(#00ee00,#ee00ee);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+
+/* ID-SPECIFIC */
+
+#index-window {
+	background-image: url("Graphics/Background.png");
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: 256px 256px;
+	background-blend-mode: multiply;
+	background-color: white;
+
+	animation-name: tilescroll256x256;
+	animation-duration: 16s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* ANIMATIONS */
+
+@keyframes tilescroll256x256 {
+	0% {
+		background-position-x: 0px;
+		background-position-y: 0px;
+	}
+	100% {
+		background-position-x: -256px;
+		background-position-y: -256px;
+	}
+}

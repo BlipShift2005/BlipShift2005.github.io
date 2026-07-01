@@ -1,0 +1,26 @@
+[
+	{
+		"Button": "FM.gif",
+		"Link": "https://projectfm.space/"
+	},
+	{
+		"Button": "Sharb.png",
+		"Link": "https://firengames.com/"
+	},
+	{
+		"Button": "ponicon.gif",
+		"Link": "https://bsky.app/profile/cakekat.bsky.social"
+	},
+	{
+		"Button": "dakota.gif",
+		"Link": "https://bsky.app/profile/dakohorse.bsky.social"
+	},
+	{
+		"Button": "goatsoup.png",
+		"Link": "https://bsky.app/profile/galesosa.bsky.social"
+	},
+	{
+		"Button": "rosie.gif",
+		"Link": "https://bsky.app/profile/astral-amethyst.neocities.org"
+	}
+]

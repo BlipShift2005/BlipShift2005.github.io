@@ -1,0 +1,150 @@
+:root
+{
+	--link-color:			#00ff00;
+	--link-color-visited:	#00b400;
+	--link-color-hover:		#ff00ff;
+	--link-color-active:	#b400b4;
+
+
+	--spritesheet-details-even:	#00000066;
+	--spritesheet-details-odd:	#000000CC;
+
+	--spritesheet-details-color: #999999FF;
+	--spritesheet-desc-color: #EEEEEEFF;
+
+	--background-width:	200%;
+}
+* {
+	image-rendering: pixelated;
+}
+
+/* Links */
+a:link
+{
+	color: var(--link-color);
+}
+
+a:visited
+{
+	color: var(--link-color-visited);
+}
+
+a:hover
+{
+	color: var(--link-color-hover);
+}
+
+a:active
+{
+	color: var(--link-color-active);
+}
+
+/* "age verification" */
+
+.to-be-verified {
+	display: none;
+}
+
+.javascript-disabled {
+	display: none;
+}
+
+.verify-your-adult {
+	background-color: black;
+
+	color: white;
+
+	position: absolute;
+
+	left:	0px;
+	right:	0px;
+	top:	0px;
+	bottom: 0px;
+}
+
+/* Commissions */
+
+.pricetable
+{
+	width: 100%;
+	border: 1px solid;
+	border-style: solid solid solid solid;
+	border-color: #FFFFFF;
+	table-layout: fixed;
+}
+
+.pricetable tr
+{
+	background-color: #101010;
+}
+.pricetable img
+{
+	cursor: pointer;
+	width: 100%;
+
+}
+
+/* Promo */
+
+.promo-row {
+	justify-content:center;
+	display: flex;
+	align-items: space-between;
+	width: auto;
+
+	margin: auto;
+	margin-bottom: 1vh;
+	margin-top: 1vh;
+}
+
+.promo-image-links {
+	width: 176px;
+	height: auto;
+
+	margin-left: 0.1vw;
+	margin-right: 0.1vw;
+
+	justify-content:center;
+	display: flex;
+	align-items: space-evenly;
+}
+
+/* Background */
+
+.background {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: var(--background-width);
+	height: 100%;
+}
+
+.background div {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-size: auto 100%;
+
+	/*animation-name: background-scroll;*/
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+
+	z-index: -20;
+}
+
+@keyframes background-scroll {
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(-50%);}
+}

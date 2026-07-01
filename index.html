@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<head>
+	<title>Home.BlipShift</title>
+	<link href="index.css" rel="stylesheet" />
+	<link href="Assets/BlipWindows.css" rel="stylesheet" />
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+	<div class="verify-your-adult">
+		<p>Some content on this website is inappropriate for younger audiences.<br />I don't have a way to check your age, therefore if you're a minor, shoo.<br />By entering this page you agree that you are 18 or older.<br />If you are under 18 I will break your shins.</p>
+		<p>If you see no button prompts, that means javascript is disabled.<br />
+		Javascript is a requirement on this website due to this screen.<br />
+		Cookies are also a requirement, a cookie is saved once you've confirmed you are an adult, and nothing else.</p>
+		<div class="javascript-disabled">
+			<button onclick="youAreAnAdult()">I am an adult.</button><br />
+			<button onclick="notAnAdult()">I'm a child and my mommy would be very angry seeing me enter this website.</button>
+		</div>
+	</div>
+	<div class="to-be-verified">
+		<!-- Background -->
+		<section class="background">
+			<div style="background-image: url('Assets/Graphics/Background/Main/1.png');animation-duration: 60s;"></div>
+			<div style="background-image: url('Assets/Graphics/Background/Main/2.png');animation-duration: 40s;"></div>
+			<div style="background-image: url('Assets/Graphics/Background/Main/3.png');animation-duration: 30s;"></div>
+			<div style="background-image: url('Assets/Graphics/Background/Main/4.png');animation-duration: 20s;"></div>
+			<div style="background-image: url('Assets/Graphics/Background/Main/5.png');animation-duration: 10s;"></div>
+		</section>
+		<!-- Main Page -->
+
+		<div class="blipwindow immobile fixedsize visible" id="index-window" style="position: absolute;
+	width: 80%;height: 95%;
+	margins: auto;
+	left: 10%;right: 10%;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Home.BlipShift.Space</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button close-button disabled"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content" style="text-align: center;" id="main-page">
+				<p style="font-family: 'BlipSpeak';">Welcome to <span class="text-yellow">my</span> website!<br />
+				I hope you stay for a bit and look around!<br />
+				Also apologies mobile users, currently not very mobile friendly, I'll figure that out someday.</p>
+				<button onclick="openWindow('check')">Check</button><br />
+				<button onclick="openWindow('projects')">My Projects</button><br />
+				<button class="disabled" onclick="">Projects I've worked on</button><br />
+				<button class="disabled" onclick="">Spritesheets</button><br />
+				<button onclick="openWindow('comms')">Commissions (OPEN)</button><br />
+				<button onclick="window.open('https://toyhou.se/BlipShift','_blank').focus();">My Characters</button><br />
+				<button onclick="window.open('https://discord.gg/uCNaVpv2nK','_blank').focus();">Blip<<64 (18+ Discord Server)</button><br />
+				<h1>Click on any of these!<br/>... if you dare...</h1>
+			</div>
+		</div>
+
+		<!-- WINDOWS -->
+
+		<!-- Check Screen -->
+		<div class="blipwindow" id="check-window" style="top: 64px; left: 64px; width: 420px; height: 256px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Check</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('check')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('check')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>Who do you want to learn about?</p>
+				<button onclick="openWindow('aboutme')">Blip</button><span style="font-family: 'Stats'; line-height: 16px; padding-left: 2px;">* That's me! That's me!! <3</span><br />
+<!--				<button onclick="openWindow('aboutsuporma')">Suporma</button><span style="font-family: 'Stats'; line-height: 16px; padding-left: 2px;">* wip</span><br />-->
+			</div>
+		</div>
+
+		<!-- Check: Blip -->
+		<div class="blipwindow" id="aboutme-window" style="top: 32px; left: 32px; width: 420px; height: 128px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">About Blippy!</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('aboutme')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('aboutme')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<div style="display: flex; padding-top: 8px; margin-bottom: 2px;">
+					<img src="Assets/Graphics/Blippy.png" style="width: 64px; height: 64px;"></img>
+					<p style="padding-left: 2px;margin-top: 2px; margin-bottom: 2px;"><span style="text-decoration: underline;">Blip</span><br/>21 * Trans * She/It/They</p>
+				</div>
+				<p style="margin-top: 2px;">Artist and Programmer</p>
+				<p style="font-family: 'Stats'; line-height: 16px;">STATS<br />LV 2 - HP 30/30 - PP 40/40<br />A cat who's full of energy on a good day. She loves to talk and meet new people.</p><hr>
+				<p style="text-decoration: underline;">Contact</p>
+				<p>Discord: _BlipShift_</p>
+				<button onclick="window.open('https://bsky.app/profile/novaig.bsky.social','_blank').focus();">Bluesky (18+)</button>
+				<button onclick="window.open('https://www.furaffinity.net/user/blipshift','_blank').focus();">Furaffinity (18+)</button>
+				<button onclick="window.open('https://artfight.net/~BlipShift','_blank').focus();">ArtFight</button>
+				<button onclick="window.open('https://codeberg.org/BlipShift','_blank').focus();">CodeBerg (superior)</button>
+				<button onclick="window.open('https://github.com/BlipShift2005','_blank').focus();">Github (inferior)</button>
+				<button onclick="window.open('https://mb.srb2.org/members/blipshift.8185/','_blank').focus();">SRB2 MB</button>
+				<button onclick="window.open('https://www.spriters-resource.com/profile/chrisfurry/','_blank').focus();">The Spriter's Resource</button><br />
+				<button onclick="window.open('https://ko-fi.com/chrisfurry','_blank').focus();">Donate?</button>
+				<br /><br />
+			</div>
+		</div>
+
+		<!-- Check: Suporma -->
+<!--		<div class="blipwindow" id="aboutsuporma-window" style="top: 32px; left: 32px; width: 420px; height: 128px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">About Suporma!</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('aboutsuporma')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('aboutsuporma')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content" style="background-color: #aa0000;">
+				<div style="display: flex; padding-top: 8px; margin-bottom: 2px;">
+					<img src="Assets/Graphics/Suporma.png" style="width: 64px; height: 64px;"></img>
+					<p style="padding-left: 2px;margin-top: 2px; margin-bottom: 2px;"><span style="text-decoration: underline;">Suporma "Soup"</span><br/>?? * Ace * He/They</p>
+				</div>
+				<p style="margin-top: 2px;">Artist and Programmer. Probably insane?</p>
+				<p style="font-family: 'Stats'; line-height: 16px;">STATS<br />LV 4 - HP 64/64 - PP 99/99<br />placeholder</p><hr>
+				<p style="text-decoration: underline;">Contact</p>
+				<br /><br />
+			</div>
+		</div>-->
+
+		<!-- My Projects -->
+		<div class="blipwindow" id="projects-window" style="top: 128px; left: 128px; width: 640px; height: 320px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">My Projects</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('projects')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('projects')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>A little pretext before you get into this, I am very ambitious. I know I can't do it alone, but I will try to finish what I have started.</p>
+				<!-- Released -->
+				<p style="text-decoration: underline;">Released</p>
+
+				<a href="#">Home.BlipShift.Space</a><span>: You're on it, dummy x3</span><hr>
+
+				<a href="https://mb.srb2.org/addons/mean-downscaler.8880/">MEAN Downscaler (SRB2)</a><span>: A downscaling tool written in Godot's GDScript. Used to make SRB2 sprites similar to the old SSNTails style. The downscaling method just take's the mean of the area of pixels it needs to downscale. It's really simple but REALLY effective.</span><hr>
+
+				<a href="https://mb.srb2.org/addons/flattening-lua.8531/">FLATTENING.LUA (Ring Racers)</a><span>: Originally made as a joke, but found out it's just something the game needed *IN MY OPINION (don't kill me kartkrew im still a virgin :'D)</span><hr>
+
+				<a href="https://mb.srb2.org/addons/chrisfurrys-ring-racers-mega-collection.8189/">ChrisFurry's Ring Racers Mega Collection</a><span>: Will be renamed in an update to "THE DIRECTOR'S RING RACERS MEGA COLLECTION" but yknow I don't have the drive to work on this rn. This is my pack of Ring Racers characters, skincolors, and maybe gamemodes in the future. Also dead name alert.</span><hr>
+
+				<a href="https://mb.srb2.org/addons/animated-skin-colors.6641/">Animated Skin Colors (Ring Racers)</a><span>: Simple script that makes it easy to make animated skin colors via lua.</span>
+				<!-- Focus -->
+				<p style="text-decoration: underline;">Current Focus</p>
+
+				<a>BlipTech</a><span>: My own game engine! Currently private, and I have no idea if I will ever release it or finish it, but what matters is I am trying and I am happy that I am getting C++ knowledge from it! ^w^</span><hr>
+
+				<a>Nip And Passion in SRB2</a><span>: It's basically finished, but I need to force myself to finish the sprites which is the hardest part. Maybe next year I'll get it done lol.</span><hr>
+
+				<a>Minecraft Porn 20XX</a><span>: An NSFW resource pack for <a href="https://github.com/JHDev2006/Super-Mario-Bros.-Remastered-Public">Super Mario Bros: Remastered</a>. Nowhere near complete and more doing this when I feel like it.</span>
+				<!-- Abandomware -->
+				<p style="text-decoration: underline;">Abandoned, Deprecated</p>
+
+				<a href="https://github.com/BlipShift2005/NeedlemouseNext-abandoned">Needlemouse Next</a><span>: The sequel to <a href="https://github.com/BlipShift2005/NeedlemouseFramework-Master">Needlemouse Framework (GMS2)</a>, A Sonic framework for Godot, I canned it because I have no motive to finish it. I personally don't enjoy working in Godot too much, but it is the best option right now. You are free to fork, fix, or use this framework, but personally I would recommend you use <a href="https://github.com/Techokami/SonicWorldsNext">Sonic Worlds Next</a>, or wait for the upcoming <a href="https://bsky.app/profile/chopp.frag.academy">GDSonic by Chopp</a>.</span><hr>
+
+				<a href="https://mb.srb2.org/addons/skin-ramp-generator.142/">Skin Ramp Generator (SRB2)</a><span>: Old tool made in clickteam, clunky, but gets the job done.</span><hr>
+
+				<a href="https://github.com/BlipShift2005/Pixysbdaygame-canceled-">Pixy Bday Game</a><span>: Once apon a time in 2022 I wanted to make a small little bday game for Pics and Pixels/Pixy. She's always been a really nice friend, and I recommend if you see her around say hi. But back on topic, I don't think this game fit her vibe (and had swearing... so minus points), and I also just forgot about it for a month. Music was made for it (by VAdaPEGA) but I don't think it ever got released. I'd rather try to make my take on Everviolet if I want to make her a game... or maybe work on Juggle like i was hired to do (looking around nervously)... Love ya pix <3</span>
+				<!-- One day, my children. -->
+				<p style="text-decoration: underline;">Unfocused, but will get to eventually.</p>
+
+				<a>Techno-Break</a><span>: The game i've been dreaming of making for a long time. 6 whole years of planning, and nothing to show. But that doesn't mean I don't have the idea down now. Just need to execute it.</span><hr>
+
+				<a>Ruby's Wacky Worlds</a><span>: A game I will focus on before Techno-Break, to get some more experience with game dev before I work on my baby...</span><hr>
+
+				<a>Rush is Missing!</a><span>: I've had some ideas for making a 8-bit styled game and I may go through with it in this. If I get to it :p</span><hr>
+
+				<a href="MagicMirror">Blip and the Magic Mirror</a><span>: Yeah I want to make an rpg.</span><hr>
+
+				<a>Blip<<64 Forums</a><span>: One of my dreams minus game developement is to start a forum. I hate social media believe it or not. Probably never happening, but a girl can dream!</span><hr>
+
+				<a>SONIC</a><span>: I AM GOD</span>
+				<br /><br />
+			</div>
+		</div>
+
+		<!-- Comms Base -->
+		<div class="blipwindow" id="comms-window" style="top: 64px; left: 64px; width: 420px; height: 356px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Commissions</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('comms')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('comms')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>Which are you looking to order?</p>
+				<button onclick="openWindow('comdrawing')">Drawings</button><br />
+				<button onclick="openWindow('compixel')">Pixel Art</button><br />
+				<button onclick="openWindow('comref')">Character Reference Sheets</button><br />
+				<button onclick="openWindow('comprogram')">Programming</button><br />
+				<p>Contact me on discord, payment can not go through paypal.<br />Cashapp or Kofi are preffered for payment.</p>
+			</div>
+		</div>
+
+		<!-- Drawings -->
+		<div class="blipwindow" id="comdrawing-window" style="top: 64px; left: 128px; width: 610px; height: 428px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Drawing Comms</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('comdrawing')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('comdrawing')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>Ask for which style you want before payment (Aliased or Anti-Aliased)</p>
+
+				<table class="pricetable">
+					<tr style="background-color: #201010;">
+						<th>Type</th>
+						<th></th>
+						<th>Flat</th>
+						<th>Cel Shaded</th>
+					</tr>
+					<tr>
+						<th style="background-color: #202010;">Base Price</th>
+						<th style="background-color: #202010;"></th>
+						<th>$5 USD</th>
+						<th>$10 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;">Additional ↧</th>
+						<th style="background-color: #102010;">Background</th>
+						<th>+$5 USD</th>
+						<th>+$20 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;">Examples</th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Flat1.png','_blank').focus();" src="Assets/Graphics/Commissions/Flat1.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Shaded1.png','_blank').focus();" src="Assets/Graphics/Commissions/Shaded1.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Flat2.png','_blank').focus();" src="Assets/Graphics/Commissions/Flat2.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Shaded2.png','_blank').focus();" src="Assets/Graphics/Commissions/Shaded2.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Shaded3.png','_blank').focus();" src="Assets/Graphics/Commissions/Shaded3.png"/></th>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Pixel Art -->
+		<div class="blipwindow" id="compixel-window" style="top: 64px; left: 128px; width: 610px; height: 428px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Pixel Art Comms</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('compixel')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('compixel')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>An area I am most confident in.</p>
+				<table class="pricetable">
+					<tr style="background-color: #201010;">
+						<th>Type</th>
+						<th></th>
+						<th>8 Bit <br /> 3-6 Colors</th>
+						<th>16 Bit <br /> 15 Colors</th>
+						<th>Doom/SRB2 <br /> 256 Possible Colors</th>
+					</tr>
+					<tr>
+						<th style="background-color: #202010;">Base Price</th>
+						<th style="background-color: #202010;">Per Character</th>
+						<th>$5 USD</th>
+						<th>$10 USD</th>
+						<th>$30 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;">Additional ↧</th>
+						<th style="background-color: #102010;">$ Per unique frame<br/>(Animation)</th>
+						<th>+$2 USD</th>
+						<th>+$4 USD</th>
+						<th>+$15 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;"></th>
+						<th style="background-color: #102010;">Scale break</th>
+						<th>+$5 USD <br /> Larger than 32x32</th>
+						<th>+$10 USD <br /> Larger than 32x32</th>
+						<th>+$10 USD <br /> Larger than 96x96</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;"></th>
+						<th style="background-color: #102010;">Screen-Scale</th>
+						<th>+$10 USD <br /> 256x240</th>
+						<th>+$15 USD <br /> 320x224</th>
+						<th>+$15 USD <br /> 320x200</th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;">Examples</th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Nes1.png','_blank').focus();" src="Assets/Graphics/Commissions/Nes1.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Gen1.png','_blank').focus();" src="Assets/Graphics/Commissions/Gen1.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/SRB1.gif','_blank').focus();" src="Assets/Graphics/Commissions/SRB1.gif"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Nes2.png','_blank').focus();" src="Assets/Graphics/Commissions/Nes2.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Gen2.png','_blank').focus();" src="Assets/Graphics/Commissions/Gen2.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/SRB2.png','_blank').focus();" src="Assets/Graphics/Commissions/SRB2.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Nes3.gif','_blank').focus();"  src="Assets/Graphics/Commissions/Nes3.gif"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/Gen3.png','_blank').focus();"  src="Assets/Graphics/Commissions/Gen3.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/SRB3.gif','_blank').focus();"  src="Assets/Graphics/Commissions/SRB3.gif"/></th>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Refs -->
+		<div class="blipwindow" id="comref-window" style="top: 64px; left: 128px; width: 610px; height: 428px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Reference Sheet Comms</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('comref')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('comref')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>References won't be done in the pixel style unless requested, these are the only examples I have.</p>
+				<table class="pricetable">
+					<tr>
+						<th style="background-color: #202010;">Base Price</th>
+						<th style="background-color: #202010;">Includes 1 Pose<br/>Side Profile Head<br/>Back Facing Head<br/>Arm/Foot Reference (if needed)<br/>Tongue/Eye Reference (if needed)</th>
+						<th>$30 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;">Additional ↧</th>
+						<th style="background-color: #102010;">Additional Outfit/Fullbody Pose</th>
+						<th>+$10 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;"></th>
+						<th style="background-color: #102010;">Additional<br/>Emotion/Doodle</th>
+						<th>+$2 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;">Examples</th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ReferenceSheet1.png','_blank').focus();" src="Assets/Graphics/Commissions/ReferenceSheet1.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ReferenceSheet2.png','_blank').focus();" src="Assets/Graphics/Commissions/ReferenceSheet2.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ReferenceSheet3.png','_blank').focus();" src="Assets/Graphics/Commissions/ReferenceSheet3.png"/></th>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Programming -->
+		<div class="blipwindow" id="comprogram-window" style="top: 64px; left: 128px; width: 610px; height: 428px;">
+			<div class="blipwindow-header">
+				<span class="blipwindow-title">Programming Comms</span>
+				<div class="blipwindow-controls">
+					<a class="blipwindow-header-button max-button" onclick="maximizeWindow('comprogram')"></a>
+					<a class="blipwindow-header-button close-button" onclick="closeWindow('comprogram')"></a>
+				</div>
+			</div>
+			<div class="blipwindow-content">
+				<p>I am very new to doing programming for people, as I've primarily done it for myself.<br />
+				When you comm me for programming, I will record my screen and send you the video file.</p><br />
+				<p>Rate: $14 USD per Hour</p><br />
+				<u>Will do:</u>
+				<menu>
+					<li>C/C++</li>
+					<li>GDScript</li>
+					<li>Lua</li>
+					<li>Help you with your game</li>
+					<li>Add modding support to your game</li>
+					<li>Code your website with raw html css and javascript.</li>
+					<li>In-game tools</li>
+					<li>Command-line tools</li>
+				</menu>
+				<u>Won't do:</u>
+				<menu>
+					<li>Make you a game engine</li>
+					<li>Make a visual tool from C/C++</li>
+				</menu>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="Assets/BlipWindows.js"></script>
+</body>
