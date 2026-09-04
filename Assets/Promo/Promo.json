@@ -13,7 +13,13 @@
 	},
 	{
 		"Button": "dakota.gif",
-		"Link": "https://bsky.app/profile/dakohorse.bsky.social"
+		"Link": "https://bsky.app/profile/dakohorse.bsky.social",
+		"NSFW": true
+	},
+	{
+		"Button": "dakotasfw.gif",
+		"Link": "https://bsky.app/profile/dakohorse.bsky.social",
+		"SFW": true
 	},
 	{
 		"Button": "goatsoup.png",

@@ -44,7 +44,9 @@
 			<div class="blipwindow-content" style="text-align: center;" id="main-page">
 				<p style="font-family: 'BlipSpeak';">Welcome to <span class="text-yellow">my</span> website!<br />
 				I hope you stay for a bit and look around!<br />
-				Also apologies mobile users, currently not very mobile friendly, I'll figure that out someday.</p>
+				Also apologies mobile users, currently not very mobile friendly, I'll figure that out someday.</p><br />
+				<button onclick="nsfwToggle()" id="NSFWSwitch">NSFW Mode</button>
+				<br /><br /><br />
 				<button onclick="openWindow('check')">Check</button><br />
 				<button onclick="openWindow('projects')">My Projects</button><br />
 				<button class="disabled" onclick="">Projects I've worked on</button><br />
@@ -211,8 +213,7 @@
 				</div>
 			</div>
 			<div class="blipwindow-content">
-				<p>Ask for which style you want before payment (Aliased or Anti-Aliased)</p>
-
+				<h2><u>Aliased Art</u></h2>
 				<table class="pricetable">
 					<tr style="background-color: #201010;">
 						<th>Type</th>
@@ -224,7 +225,7 @@
 						<th style="background-color: #202010;">Base Price</th>
 						<th style="background-color: #202010;"></th>
 						<th>$5 USD</th>
-						<th>$10 USD</th>
+						<th>$20 USD</th>
 					</tr>
 					<tr>
 						<th style="background-color: #102010;">Additional ↧</th>
@@ -249,6 +250,51 @@
 						<th style="background-color: #101020;"></th>
 						<th></th>
 						<th><img onclick="window.open('Assets/Graphics/Commissions/Shaded3.png','_blank').focus();" src="Assets/Graphics/Commissions/Shaded3.png"/></th>
+					</tr>
+				</table>
+				<h2><u>Anti-Aliased Art</u></h2>
+				<table class="pricetable">
+					<tr style="background-color: #201010;">
+						<th>Type</th>
+						<th></th>
+						<th>Flat</th>
+						<th>Cel Shaded</th>
+					</tr>
+					<tr>
+						<th style="background-color: #202010;">Base Price</th>
+						<th style="background-color: #202010;"></th>
+						<th>$10 USD</th>
+						<th>$35 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;">Additional ↧</th>
+						<th style="background-color: #102010;">Background</th>
+						<th>+$10 USD</th>
+						<th>+$25 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #102010;"></th>
+						<th style="background-color: #102010;">Gradient/Airbrush Shading</th>
+						<th>+$5 USD</th>
+						<th>+$15 USD</th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;">Examples</th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/FlatAA1.png','_blank').focus();" src="Assets/Graphics/Commissions/FlatAA1.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ShadedAA1.png','_blank').focus();" src="Assets/Graphics/Commissions/ShadedAA1.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/FlatAA2.png','_blank').focus();" src="Assets/Graphics/Commissions/FlatAA2.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ShadedAA2.png','_blank').focus();" src="Assets/Graphics/Commissions/ShadedAA2.png"/></th>
+					</tr>
+					<tr>
+						<th style="background-color: #101020;"></th>
+						<th style="background-color: #101020;"></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/FlatAA3.png','_blank').focus();" src="Assets/Graphics/Commissions/FlatAA3.png"/></th>
+						<th><img onclick="window.open('Assets/Graphics/Commissions/ShadedAA3.png','_blank').focus();" src="Assets/Graphics/Commissions/ShadedAA3.png"/></th>
 					</tr>
 				</table>
 			</div>

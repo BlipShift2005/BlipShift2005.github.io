@@ -88,13 +88,15 @@ a:active
 
 .promo-row {
 	justify-content:center;
-	display: flex;
+	display: grid;
 	align-items: space-between;
-	width: auto;
+	width: 100%;
 
 	margin: auto;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
+	/* Idk how grids work so this is the best i can do lol */
+	grid: auto / auto auto auto;
 }
 
 .promo-image-links {
@@ -107,6 +109,10 @@ a:active
 	justify-content:center;
 	display: flex;
 	align-items: space-evenly;
+}
+
+.hidden {
+	display: none;
 }
 
 /* Background */
